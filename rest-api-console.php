@@ -19,10 +19,7 @@ class WP_API_Console {
 	}
 	
 	public function admin_init() {
-		$hook = add_management_page( 'Rest API Console', 'Rest API Console', 'manage_options', 'rest_api_console', array( $this, 'nope' ) );
-	}
-	
-	public function nope() {
+		$hook = add_management_page( 'Rest API Console', 'Rest API Console', 'manage_options', 'rest_api_console', '__return_null' );
 	}
 	
 	public function render() {
