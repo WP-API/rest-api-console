@@ -13,7 +13,8 @@ module.exports = function(grunt) {
 		browserify: {
 			dist: {
 				files: {
-					'app.js': 'lib/**/*.js'
+					'app.js': 'lib/app.js',
+					'search.js': 'lib/search.js'
 				},
 				options: {
 					transform: ['uglifyify']
