@@ -12,8 +12,11 @@
  */
 
 class WP_API_Console {
+	public static $path;
 
 	public function __construct() {
+		self::$path = __FILE__;
+
 		add_action( 'admin_menu', array( $this, 'admin_init' ) );
 		add_action( 'load-tools_page_rest_api_console', array( $this, 'render' ) );
 	}
