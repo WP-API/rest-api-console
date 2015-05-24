@@ -1,7 +1,7 @@
 <?php
 
-wp_enqueue_style( 'rest-api-console', plugins_url( 'style.css', WP_API_Console::$path ) );
-wp_enqueue_script( 'rest-api-console', plugins_url( 'app.js', WP_API_Console::$path ) );
+wp_enqueue_style( 'rest-api-console', plugins_url( 'style.min.css', WP_API_Console::$path ) );
+wp_enqueue_script( 'rest-api-console', plugins_url( 'app.min.js', WP_API_Console::$path ) );
 wp_localize_script( 'rest-api-console', 'console_search_url', plugins_url( 'search.js', WP_API_Console::$path ) );
 
 iframe_header();

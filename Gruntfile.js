@@ -6,15 +6,15 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				files: {
-					'style.css': 'templates/sass/**/*.scss'
+					'style.min.css': 'templates/sass/**/*.scss'
 				}
 			}
 		},
 		browserify: {
 			dist: {
 				files: {
-					'app.js': 'lib/app.js',
-					'search.js': 'lib/search.js'
+					'app.min.js': 'lib/app.js',
+					'search.min.js': 'lib/search.js'
 				},
 				options: {
 					transform: ['uglifyify']
