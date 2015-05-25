@@ -1,10 +1,10 @@
 <?php
 
-wp_enqueue_style( 'rest-api-console', plugins_url( 'build/style.min.css', WP_API_Console::$path ) );
-wp_enqueue_script( 'rest-api-console', plugins_url( 'build/app.min.js', WP_API_Console::$path ), array( 'underscore' ) );
+wp_enqueue_style( 'rest-api-console', plugins_url( 'build/style.min.css', WP_REST_Console::$path ) );
+wp_enqueue_script( 'rest-api-console', plugins_url( 'build/app.min.js', WP_REST_Console::$path ), array( 'underscore' ) );
 wp_localize_script( 'rest-api-console', 'rest_api_console', array(
 	'rest_url'   => rest_url(),
-	'search_url' => plugins_url( 'build/search.min.js', WP_API_Console::$path ),
+	'search_url' => plugins_url( 'build/search.min.js', WP_REST_Console::$path ),
 	'rest_nonce' => wp_create_nonce('wp_rest'),
 ) );
 

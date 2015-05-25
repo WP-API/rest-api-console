@@ -11,7 +11,7 @@
  * Domain Path: /language
  */
 
-class WP_API_Console {
+class WP_REST_Console {
 	public static $path;
 
 	public function __construct() {
@@ -22,7 +22,7 @@ class WP_API_Console {
 	}
 
 	public function admin_init() {
-		$hook = add_management_page( 'Rest API Console', 'Rest API Console', 'manage_options', 'rest_api_console', array( $this, 'render_page' ) );
+		$hook = add_management_page( 'REST API Console', 'REST API Console', 'manage_options', 'rest_api_console', array( $this, 'render_page' ) );
 
 		add_action( 'admin_print_styles-' . $hook, array( $this, 'register_styles' ) );
 	}
@@ -46,11 +46,11 @@ class WP_API_Console {
 		<?php
 	}
 
-	static function instance() {
+	public static function instance() {
 		static $instance = null;
 
 		if ( is_null( $instance ) ) {
-			$instance = new WP_API_Console();
+			$instance = new self();
 		}
 
 		return $instance;
@@ -59,5 +59,5 @@ class WP_API_Console {
 
 
 if ( is_admin() ) {
-	WP_API_Console::instance();
+	WP_REST_Console::instance();
 }
