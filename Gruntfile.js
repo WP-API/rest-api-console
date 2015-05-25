@@ -11,6 +11,11 @@ module.exports = function(grunt) {
 			}
 		},
 		browserify: {
+			options: {
+				browserifyOptions: {
+					debug: true,
+				}
+			},
 			dist: {
 				files: {
 					'build/app.min.js': 'lib/app.js',
