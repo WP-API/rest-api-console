@@ -22,12 +22,22 @@ class WP_API_Console {
 	}
 
 	public function admin_init() {
-		$hook = add_management_page( 'Rest API Console', 'Rest API Console', 'manage_options', 'rest_api_console', '__return_null' );
+		$hook = add_management_page( 'Rest API Console', 'Rest API Console', 'manage_options', 'rest_api_console', array( $this, 'render_page' ) );
 	}
 
 	public function render() {
+		if ( ! isset( $_GET['iframe'] ) ) {
+			return;
+		}
 		include( __DIR__ . '/templates/views/app.php' );
 		exit;
+	}
+
+	public function render_page() {
+		$url = add_query_arg( 'iframe', 'yesplease' );
+		?>
+		<iframe src="<?php echo esc_url( $url ) ?>" style="width: 100%; height: 600px;"></iframe>
+		<?php
 	}
 
 	static function instance() {
