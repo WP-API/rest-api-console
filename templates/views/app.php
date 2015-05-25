@@ -2,7 +2,10 @@
 
 wp_enqueue_style( 'rest-api-console', plugins_url( 'build/style.min.css', WP_API_Console::$path ) );
 wp_enqueue_script( 'rest-api-console', plugins_url( 'build/app.min.js', WP_API_Console::$path ) );
-wp_localize_script( 'rest-api-console', 'console_search_url', plugins_url( 'search.js', WP_API_Console::$path ) );
+wp_localize_script( 'rest-api-console', 'rest_api_console', array(
+	'rest_url'   => rest_url(),
+	'search_url' => plugins_url( 'search.js', WP_API_Console::$path ),
+) );
 
 iframe_header();
 
