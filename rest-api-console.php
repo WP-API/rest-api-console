@@ -18,14 +18,14 @@ class WP_API_Console {
 		self::$path = __FILE__;
 
 		add_action( 'admin_menu', array( $this, 'admin_init' ) );
-		add_action( 'load-tools_page_rest_api_console', array( $this, 'render' ) );
+		add_action( 'load-tools_page_rest_api_console', array( $this, 'maybe_render_iframe' ) );
 	}
 
 	public function admin_init() {
 		$hook = add_management_page( 'Rest API Console', 'Rest API Console', 'manage_options', 'rest_api_console', array( $this, 'render_page' ) );
 	}
 
-	public function render() {
+	public function maybe_render_iframe() {
 		if ( ! isset( $_GET['iframe'] ) ) {
 			return;
 		}
