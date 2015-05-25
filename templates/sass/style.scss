@@ -473,7 +473,7 @@ div#submit {
   -webkit-box-sizing: border-box;
 
   div#path > & {
-    background: url(res/return-@2x.png) no-repeat center center hsl(202,68%,44%);
+    background: url(../res/return-@2x.png) no-repeat center center hsl(202,68%,44%);
     background-size: 24px 24px;
     color: hsl(201,60%,97%);
 
@@ -485,7 +485,7 @@ div#submit {
     &:active, &.active {
       color: hsl(201,60%,70%);
       background-color: hsl(201,60%,100%);
-      background-image: url(res/return-dark-@2x.png);
+      background-image: url(../res/return-dark-@2x.png);
     }
 
   }
@@ -520,22 +520,22 @@ div#submit {
     height: 24px;
     opacity: 1;
     overflow: hidden;
-    background: url(res/search-dark-@2x.png) no-repeat center center transparent;
+    background: url(../res/search-dark-@2x.png) no-repeat center center transparent;
     background-size: 16px 16px;
     cursor: default;
 
     .endpoint & {
-      background-image: url(res/close-dark-@2x.png);;
+      background-image: url(../res/close-dark-@2x.png);;
       cursor: pointer;
 
       &:hover {
         background-color: hsl(201,60%,60%);
-        background-image: url(res/close-@2x.png);
+        background-image: url(../res/close-@2x.png);
       }
 
       &:active {
         background-color: hsl(201,60%,70%);
-        background-image: url(res/close-@2x.png);
+        background-image: url(../res/close-@2x.png);
       }
 
     }
@@ -1118,7 +1118,7 @@ code {
       width: 16px;
       height: 20px;
       margin-right: 8px;
-      background: url(res/disclosure-dark-@2x.png) center center no-repeat;
+      background: url(../res/disclosure-dark-@2x.png) center center no-repeat;
       background-size: 16px 16px;
       -moz-transform: rotate(180deg);
       -webkit-transform: rotate(180deg);
