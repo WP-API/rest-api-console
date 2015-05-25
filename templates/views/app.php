@@ -5,6 +5,7 @@ wp_enqueue_script( 'rest-api-console', plugins_url( 'build/app.min.js', WP_API_C
 wp_localize_script( 'rest-api-console', 'rest_api_console', array(
 	'rest_url'   => rest_url(),
 	'search_url' => plugins_url( 'build/search.min.js', WP_API_Console::$path ),
+	'rest_nonce' => wp_create_nonce('wp_rest'),
 ) );
 
 iframe_header();
