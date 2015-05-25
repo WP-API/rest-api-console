@@ -23,6 +23,12 @@ class WP_API_Console {
 
 	public function admin_init() {
 		$hook = add_management_page( 'Rest API Console', 'Rest API Console', 'manage_options', 'rest_api_console', array( $this, 'render_page' ) );
+
+		add_action( 'admin_print_styles-' . $hook, array( $this, 'register_styles' ) );
+	}
+
+	public function register_styles() {
+		wp_enqueue_style( 'rest-api-console-page', plugins_url( 'build/page.min.css', self::$path ) );
 	}
 
 	public function maybe_render_iframe() {

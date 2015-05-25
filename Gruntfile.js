@@ -6,7 +6,8 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				files: {
-					'build/style.min.css': 'templates/sass/style.scss'
+					'build/style.min.css': 'templates/sass/style.scss',
+					'build/page.min.css': 'templates/sass/page.scss'
 				}
 			}
 		},
