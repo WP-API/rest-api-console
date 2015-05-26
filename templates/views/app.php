@@ -15,7 +15,6 @@ iframe_header();
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:300italic,400italic,600italic,400,300,600">
     -->
     <div id="path">
-        <div id="auth" tabindex="2"></div>
         <div id="versions"></div>
         <div id="lookup-container">
             <div id="method"></div>
