@@ -15,7 +15,7 @@ To get up and running:
     `npm install`
 
 3. Build with Grunt
-    `grunt build`
+    `grunt`
 
 4. Activate the plugin in your WordPress admin.
 
