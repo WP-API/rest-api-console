@@ -16,7 +16,7 @@ You'll need to have the [WordPress REST API][] plugin (v2 or later) installed to
 
 Don't have a WordPress site handy? Want to try-before-you-buy? Check out [demo.wp-api.org](http://demo.wp-api.org/) for a publicly visible version!
 
-[WordPress REST API]: https://wordpress.org/plugin/rest-api/
+[WordPress REST API]: https://wordpress.org/plugins/rest-api/
 
 == Installation ==
 
