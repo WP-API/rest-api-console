@@ -26,6 +26,10 @@ Congratulations!
 
 == Changelog ==
 
+= 2.1 =
+
+* Remove erroneous double slash in API URLs.
+
 = 2.0.1 =
 
 * Correct versioning issue
