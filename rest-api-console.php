@@ -41,8 +41,27 @@ class WP_REST_Console {
 
 	public function render_page() {
 		$url = add_query_arg( 'iframe', 'yesplease' );
+
+		if ( ! get_option('permalink_structure') ) {
+			?>
+			<div class="notice notice-error">
+				<p><?php
+				printf(
+					__( 'Permalink settings are set to <strong>Plain</strong>, which prevents the REST API from working. Please change to another permalink type on the <a href="%s">Permalink Settings</a> page.', 'rest-api-console' ),
+					admin_url( 'options-permalink.php' )
+				); ?>
+				</p>
+			</div>
+			<?php
+		} else {
+			?>
+			<iframe src="<?php echo esc_url( $url ) ?>" style="width: 100%; height: 600px;"></iframe>
+			<?php
+		}
+	}
+
+	public function missing_pretty_permalinks() {
 		?>
-		<iframe src="<?php echo esc_url( $url ) ?>" style="width: 100%; height: 600px;"></iframe>
 		<?php
 	}
 
